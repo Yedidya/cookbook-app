@@ -1,0 +1,27 @@
+<h1><%= @recipe.title %></h1>
+
+<img class="show-images" src="<%= @recipe.photo_url %>">
+
+<h3>Prep time: <%= @recipe.prep_time %></h3>
+
+
+<p>By: <%= @recipe.author %> </p>
+
+<h2>Ingredients:</h2>
+
+<ul>
+  <% @recipe.ingredient_list.each do |ingredient| %>
+  <li><%= ingredient %></li>
+  <% end %>
+</ul>
+
+<h2>Directions:</h2>
+
+<ol>
+  <% @recipe.directions_list.each do |direction| %>
+  <li><%= direction %></li>
+  <% end %>
+</ol>
+
+<p>Created on <%= @recipe.date_created %></p>
+<p>Updated on <%= @recipe.date_updated %></p>

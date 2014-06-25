@@ -1,0 +1,22 @@
+<h1>Welcome to Cookbook.ly! Here are the recipes:</h1>
+
+<div class="row">
+  <% @recipes.each do |recipe| %>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="<%=recipe.photo_url%>" alt="...">
+        <div class="caption">
+          <h3><a href="/recipes/<%= recipe.id %>"><%= recipe.title %></a></h3>
+          <p><%= recipe.author %></p>
+          <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+  
+ 
+  
+
+
